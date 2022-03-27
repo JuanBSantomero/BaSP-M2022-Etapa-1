@@ -60,13 +60,13 @@
    <hr>
 
    <section>
-     <h3>Productivity booster</h3>
+     <h2>Productivity booster</h2>
 
-     <h3>Leadership and team managment</h3>
+     <h2>Leadership and team managment</h2>
 
-     <h3>Work traceability</h3>
+     <h2>Work traceability</h2>
 
-     <h3>Decision making</h3>
+     <h2>Decision making</h2>
    </section>
 
    <hr>
@@ -76,9 +76,55 @@
 
      <form action="process.php" method="POST">
        <label>First Name</label>
-       <input type="text" name="first-name">
+       <input type="text" name="firstName">
 
-     </form>
+       <label>Last Name</label>
+       <input type="text" name="lastName">
+
+      <div>
+        <label>Email</label>
+        <input type="email" name="email">
+      </div>
+
+      <div>
+        <label>Contact area</label>
+        <select name="contact area">
+          <option value="sales">Sales</option>
+          <option value="support">Support</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Text area</label>
+        <textarea name="placeholder"></textarea>
+      </div>
+
+      <div>
+        <input type="submit" name="submit" value="Send message">
+        <input type="submit" name="submit" value="Reset">
+      </div>
+
+    </form>
+   </section>
+
+   <hr>
+
+   <section>
+      <h2>Who we are</h2>
+
+      <p>
+        RR time tracker is a web platform that help to manage time at work.
+        What type of application do you have in mind?
+        We're providing you with the core UI kit needed to kickstart your design
+        and development while also allowing you to add new funcionalities
+        to the existing capabilities. 
+      </p>
+   </section>
+
+   <hr>
+
+   <section>
+     
    </section>
 </body>
 </html>
