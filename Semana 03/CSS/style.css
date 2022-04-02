@@ -1,0 +1,35 @@
+body{
+    margin:0;
+}
+#logo{
+    display:inline-block;
+    margin: 0px 0px 0px 0px;
+}
+#main-header{
+    background-color: #46A37C;
+    height: 150px;
+    color: #373867;
+    position:relative
+}
+#main-header h2{
+    display: inline-block;
+    position: relative;
+    bottom: 51px;
+    left: 47px;
+    font-size: 40px;
+    font-family: reboto;
+}
+#sidebar{
+    display: inline-block;
+    background-color: #373867;
+    border: 1px #373867;
+    padding: 58px;
+}
+#sidebar ul{
+    list-style:none;
+    font-size: 30px;
+}
+#sidebar a{
+    text-decoration: none;
+    color: #fff;
+}
