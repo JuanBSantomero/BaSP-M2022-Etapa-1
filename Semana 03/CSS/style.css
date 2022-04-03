@@ -24,6 +24,7 @@ body{
     background-color: #373867;
     border: 1px #373867;
     padding: 58px;
+    
 }
 #sidebar ul{
     list-style:none;
@@ -32,4 +33,36 @@ body{
 #sidebar a{
     text-decoration: none;
     color: #fff;
+}
+#introductive-text h1{
+    font-size: 60px;
+    display: inline-block;
+    position: relative;
+    bottom: 320px;
+    left: 410px;
+    color:#373867
+}
+#subtitle{
+    color:#B4AFAF;
+    font-size:16px;
+    display:inline-block;
+    position:relative;
+    bottom:280px;
+    right: 155px;
+}
+#paragraph{
+    color:#373867;
+    font-size: 20px;
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    bottom: 140px;
+    right:460px;
+}
+#pc-picture{
+    display:inline-block;
+    position: relative;
+    left: 1080px;
+    bottom: 440px;
+    width:317px; height: 395px;
 }
