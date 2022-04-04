@@ -170,25 +170,25 @@ body{
     position: relative;
     top: 30px;
     right: 75px;
-    width: 450px;
+    width: 41%;
 }
 .contact-email{
     position: relative;
     top: 25px;
     right: 40px;
-    width: 990px;
+    width: 90%;
 }
 .contact select{
     position: relative;
     top: 25px;
     right: 88px;
-    width: 1000px;
+    width: 90%;
 }
 .contact textarea{
     position: relative;
     top: 47px;
     right: 64px;
-    width: 1000px;
+    width: 90%;
 }
 .contact input{
     position: relative;
@@ -215,7 +215,7 @@ body{
     background-color: #fff;
     border-radius: 40px;
     box-shadow: 5px 5px 10px;
-    width: 1000px; 
+    width: 67%; 
     padding: 35px 0px 50px 0px;  
 }
 .who-we-are h2{
@@ -231,4 +231,22 @@ body{
     color: #373867;
     padding-left: 40px;
     padding-right: 20px;
+}
+.lists{
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    top: 200px;
+    left: 450px;
+    font-family: "Reboto", sans-serif;
+    color: black;
+}
+.lists a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.lists h2{
+    font-size: 30px;
+    font-weight: bold;
 }
