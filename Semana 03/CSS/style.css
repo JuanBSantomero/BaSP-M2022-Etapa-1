@@ -250,3 +250,15 @@ body{
     font-size: 30px;
     font-weight: bold;
 }
+#main-footer{
+    position: relative;
+    top: 350px;
+    text-align: center;
+}
+.logo{
+    display: inline-block;
+    margin: 25PX;
+}
+#main-footer a{
+    text-decoration: none;
+}
