@@ -4,6 +4,10 @@ body{
 .margin{
     margin-left: 22%;
 }
+.line{
+    border-bottom: 1px solid black;
+    padding: 25px 0px 50px 0px;
+}
 #logo{
     position: fixed;
     margin: 0px 0px 0px 0px;
