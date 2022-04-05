@@ -1,36 +1,38 @@
 body{
     margin:0;
 }
+.margin{
+    margin-left: 22%;
+}
 #logo{
     position: fixed;
     margin: 0px 0px 0px 0px;
 }
 #main-header{
     background-color: #46A37C;
-    height: 150px;
+    height: 20.2%;
     color: #373867;
-    position:relative
 }
 #main-header h2{
-    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 20%;
     position: relative;
     top: 50px;
-    left: 300px;
-    font-size: 40px;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
 }
 .sidebar{
     position: fixed;
     background-color: #373867;
     border: 1px #373867;
-    padding: 71px;
+    padding-bottom: 100%;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
 }
 .sidebar ul{
     list-style:none;
     font-size: 30px;
+    padding: 71px;
 }
 .sidebar a{
     text-decoration: none;
