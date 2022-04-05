@@ -38,45 +38,31 @@ body{
     text-decoration: none;
     color: #fff;
 }
-.introductive-text{
-    position: relative;
-    top: 50px;
-}
 .introductive-text h1{
     font-size: 60px;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    display: inline-block;
-    position: relative;
-    bottom: 55px;
-    left: 310px;
-    color:#373867
+    color:#373867;
+    margin-top: 5%;
 }
 .subtitle{
     color:#B4AFAF;
     font-size:16px;
     font-family: "Roboto", sans-serif;
-    display:inline-block;
-    position:relative;
-    bottom:10px;
-    right: 305px;
+    margin-top: 2.5%;
 }
 .paragraph{
     color:#373867;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
-    display: inline-block;
-    width: 30%;
-    position: relative;
-    bottom: -150px;
-    right:624px;
+    width: 39%;
+    margin-top: 2.5%;
 }
 #pc-picture{
-    display:inline-block;
-    position: relative;
-    left: 1080px;
-    top: -120px;
     width:317px; height: 395px;
+    position: relative;
+    margin-top: -22%;
+    margin-left: 65%;
 }
 .box{
     display: inline-block;
