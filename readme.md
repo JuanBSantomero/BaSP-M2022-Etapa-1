@@ -1,8 +1,13 @@
-# Second weekly isssue
-## Second week - BaSP - 2022
-This HTML work was developed by Juan Bautista Gonzalez Santomero
+# BaSP-M2022-Etapa-1
+## Week 1
  ```
- 1- index.html file
- 2- Assets folder filled with images
- 3- readme.md file
+ We created the figma design
+ ```
+## Week 2
+ ```
+ Created the HTML of the landing page
+ ```
+## Week 3
+ ```
+ Created the css for the landing page
  ```
