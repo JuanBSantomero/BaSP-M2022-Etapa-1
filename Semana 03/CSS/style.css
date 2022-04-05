@@ -218,13 +218,11 @@ body{
     font-weight: bold;
 }
 #main-footer{
-    position: relative;
-    top: 520px;
-    text-align: center;
+    margin-top: 5%;
+    margin-left: 25%;
 }
 .logo{
-    display: inline-block;
-    margin: 25PX;
+    margin-left: 1%;
 }
 #main-footer a{
     text-decoration: none;
