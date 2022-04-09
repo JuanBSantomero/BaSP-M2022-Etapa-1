@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    max-width:150px ;
+}
+header{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    height: 10%;
+    background-color: #46a37c; 
+}
+header h2{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
