@@ -22,6 +22,17 @@
         font-size: 14px;
         color: #373867;
     }
+    .box h2{
+        font-family: "Roboto", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color:#46A37C;
+    }
+    .box p{
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        color:#373867;
+    }
 }
 @media (min-width: 820px){
     .header-tittle{
@@ -46,6 +57,17 @@
         font-family: "Reboto", sans-serif;
         font-size: 20px;
         color: #373867;
+    }
+    .box h2{
+        font-family: "Roboto", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color:#46A37C;
+    }
+    .box p{
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        color:#373867;
     }
     .container-hamburguer{
         display: none;

@@ -24,3 +24,24 @@ h1{
     height: 300px;
     margin-top: 15px;
 }
+.container-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    padding-bottom: 8%;
+    max-width: 45%;
+}
+.box h2{
+    text-align: center;
+    margin-top: 35px;
+}
+.box p{
+    text-align: center;
+    margin-top: 25px;
+}
