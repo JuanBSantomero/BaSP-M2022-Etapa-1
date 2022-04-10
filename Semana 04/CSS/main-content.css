@@ -1,0 +1,26 @@
+main{
+}
+.introductive-text{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+h1{
+    line-height: 40px;
+}
+.paragraph{
+    text-align: center;
+    max-width: 50%;
+    margin-top: 15px;
+}
+.subtitle{
+    text-align: center;
+    line-height: 15px;
+    width: 100%;
+    margin-top: 15px;
+}
+.pc-picture{
+    width: 250px;
+    height: 300px;
+    margin-top: 15px;
+}

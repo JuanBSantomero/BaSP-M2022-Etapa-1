@@ -11,6 +11,17 @@
         font-weight: bold;
         color:#373867;
     }
+    .subtitle{
+        font-family: "Reboto", sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        color: #B4AFAF;
+    }
+    .paragraph{
+        font-family: "Reboto", sans-serif;
+        font-size: 14px;
+        color: #373867;
+    }
 }
 @media (min-width: 820px){
     .header-tittle{
@@ -24,5 +35,19 @@
         font-size: 60px;
         font-weight: bold;
         color:#373867;
+    }
+    .subtitle{
+        font-family: "Reboto", sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: #B4AFAF;
+    }
+    .paragraph{
+        font-family: "Reboto", sans-serif;
+        font-size: 20px;
+        color: #373867;
+    }
+    .container-hamburguer{
+        display: none;
     }    
 }
