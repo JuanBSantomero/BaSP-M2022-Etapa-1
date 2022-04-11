@@ -44,6 +44,35 @@
         font-size: 18px;
         color:#373867;
     }
+    .contact-tittle{
+        font-family: "Reboto", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .contact label{
+        font-family: "Reboto", sans-serif;
+        font-size: 14px;
+        color: #373867;
+    }
+    .input-submit{
+        background-color: #AACE9B;
+        border-radius: 5px;
+        border: #AACE9B solid;
+        font-family: "Reboto", sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .input-reset{
+        background-color: #fff;
+        border-radius: 5px;
+        border: 2px #373867 solid;
+        font-family: "Reboto", sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #373867;
+    }
 }
 @media (min-width: 820px){
     .header-tittle{
@@ -90,6 +119,35 @@
         font-family: "Roboto", sans-serif;
         font-size: 18px;
         color:#373867;
+    }
+    .contact-tittle{
+        font-family: "Reboto", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .contact label{
+        font-family: "Reboto", sans-serif;
+        font-size: 14px;
+        color: #373867;
+    }
+    .input-submit{
+        background-color: #AACE9B;
+        border-radius: 5px;
+        border: #AACE9B solid;
+        font-family: "Reboto", sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .input-reset{
+        background-color: #fff;
+        border-radius: 5px;
+        border: 2px #373867 solid;
+        font-family: "Reboto", sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #373867;
     }
     .container-hamburguer{
         display: none;

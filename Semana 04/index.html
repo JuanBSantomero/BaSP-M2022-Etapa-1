@@ -34,6 +34,7 @@
       </ul>
     </aside>
     <main>
+      <section class="line">
       <section class="introductive-text">
         <h1>Hi, we are Trackgenix</h1>
         <p class="subtitle">
@@ -45,6 +46,7 @@
           when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </p>
         <img class="pc-picture" src="Assets/Img.1.png" alt="Image">
+      </section>
       </section>
       <section class="line">
       <section class="container-boxes">
@@ -131,8 +133,9 @@
       </section>
       </section>
       <section class="line">
+      <section class="contact-container">
         <div class="contact">
-          <h2 id="contact-tittle">Contact us for information about the sistem</h2>
+          <h2 class="contact-tittle">Contact us for information about the sistem</h2>
           <form action="process.php" method="POST">
             <div>
               <label>First Name</label>
@@ -146,21 +149,24 @@
             </div>
             <div>
               <label>Contact area</label>
-              <select name="contact area">
+              <select class="select-contact" name="contact area">
                 <option value="sales">Sales</option>
                 <option value="support">Support</option>
               </select>
             </div>
             <div>
               <label>Text area</label>
-              <textarea name="placeholder" placeholder="Placeholder"></textarea>
+              <textarea class="text-area" name="placeholder" placeholder="Placeholder"></textarea>
             </div>
             <div>
-              <input class="input-submit" type="submit" name="submit" value="Send message">
-              <input class="input-reset" type="submit" name="submit" value="Reset">
+              <div class="inputs">
+                <input class="input-submit" type="submit" name="submit" value="Send message">
+                <input class="input-reset" type="submit" name="submit" value="Reset">
+              </div>
             </div>
           </form>
         </div>
+      </section>
       </section>
       <section class="line">
         <div class="who-we-are">
