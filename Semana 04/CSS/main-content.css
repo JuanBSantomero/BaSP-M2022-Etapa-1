@@ -11,6 +11,11 @@
         width: 80%;
     }
 }
+@media (max-width: 840px){
+    .sidebar{
+        display: none;
+    }
+}
 main{
     padding: 0px 15px;
 }
@@ -26,12 +31,12 @@ main{
 .texts{
     display: flex;
     flex-direction: column;
-    max-width: 64%;
+    max-width: 40%;
     min-width: 300px;
     justify-content: flex-start;
     margin-bottom: 10px;
 }
-h1{
+h1{ 
     line-height: 70px;
 }
 .subtitle{
@@ -137,17 +142,7 @@ h1{
     justify-content: center;
 }
 .lists{
-    min-width: 190px;
+    min-width: 230px;
     flex-basis: 20%;
     line-height: 25px;
-}
-footer{
-    padding-top: 25px;
-    background-color: #fff;
-    line-height: 30px;
-    width: 100%;
-    text-align: center;
-}
-footer a{
-    text-decoration: none;
 }

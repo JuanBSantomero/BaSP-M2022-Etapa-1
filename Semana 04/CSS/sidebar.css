@@ -1,17 +1,12 @@
-@media (max-width:840px){
-    .sidebar{
-        display: none;
-    }
+.logo{
+    width: 100%;
+    height: 150px;
 }
 .sidebar{
     position: fixed;
     background-color: #373867;
     width: 20%;
     height: 100%;
-}
-.logo{
-    width: 100%;
-    height: 150px;
 }
 .sidebar a{
     text-decoration: none;
