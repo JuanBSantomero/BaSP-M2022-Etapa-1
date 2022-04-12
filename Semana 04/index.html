@@ -14,226 +14,232 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
   </head>
   <body>
-    <header>
-      <div class="container-hamburguer">
-        <div class="hamburguer-menu">
-          <img src="Assets/hamburguer 1.png" alt="hamburguer">
-        </div>
-      </div>
-      <div class="header-tittle">
-        <h2>Trackgenix SA</h2>
-      </div>
-    </header>
-    <aside class="sidebar">
-      <img src="Assets/logo.png" alt="logo">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sign Up</a></li>
-        <li><a href="#">Log in</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </aside>
-    <main>
-      <section class="line">
-      <section class="introductive-text">
-        <h1>Hi, we are Trackgenix</h1>
-        <p class="subtitle">
-          THE BEST CHOICE FOR YOUR BUSINESS
-        </p>
-        <p class="paragraph">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </p>
-        <img class="pc-picture" src="Assets/Img.1.png" alt="Image">
-      </section>
-      </section>
-      <section class="line">
-      <section class="container-boxes">
-        <div class="box">
-          <h2>Hours</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-        </div>
-        <div class="box">
-          <h2>Reports</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-        </div>
-        <div class="box">
-          <h2>Resource Managment</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-        </div>
-        <div class="box">
-          <h2>Multiple Roles</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-        </div>
-      </section>
-      </section>
-      <section class="line">
-      <section class="features-container">
-        <div class="features">
-          <div class="container-icon">
-            <div class="icon">
-              <img src="Assets/icon-Productivity-booster.png" alt="Productivity">
-            </div>
+    <div class="sidebar-container">
+      <aside class="sidebar">
+        <img class="logo" src="Assets/logo.png" alt="logo">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </aside>
+    </div>
+    <div class="main-container">
+      <header>
+        <div class="container-hamburguer">
+          <div class="hamburguer-menu">
+            <img src="Assets/hamburguer 1.png" alt="hamburguer">
           </div>
-          <div class="text-features"> 
-            <h2>Productivity booster</h2>
+        </div>
+        <div class="header-tittle">
+          <h2>Trackgenix SA</h2>
+        </div>
+      </header>
+      <main>
+        <section class="line">
+        <section class="introductive-text">
+          <div class="texts">
+            <h1>Hi, we are Trackgenix</h1>
+            <p class="subtitle">
+              THE BEST CHOICE FOR YOUR BUSINESS
+            </p>
+            <p class="paragraph">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <img class="pc-picture" src="Assets/Img.1.png" alt="Image">
+        </section>
+        </section>
+        <section class="line">
+        <section class="container-boxes">
+          <div class="box">
+            <h2>Hours</h2>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
-        </div>
-        <div class="features">
-          <div class="text-features">
-            <h2>Leadership and team managment</h2>
+          <div class="box">
+            <h2>Reports</h2>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
-          <div class="container-icon">
-            <div class="icon">
-              <img src="Assets/icon-leadership.png" alt="Leadership">
-            </div>
-          </div>
-        </div>
-        <div class="features">
-          <div class="container-icon">
-            <div class="icon">
-              <img src="Assets/icon-work-traceability.png" alt="Work">
-            </div>
-          </div>
-          <div class="text-features">
-            <h2>Work traceability</h2>
+          <div class="box">
+            <h2>Resource Managment</h2>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
-        </div>
-        <div class="features">
-          <div class="text-features">
-            <h2>Decision making</h2>
+          <div class="box">
+            <h2>Multiple Roles</h2>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
           </div>
-          <div class="container-icon">
-            <div class="icon">
-              <img src="Assets/icon-decision-making.png" alt="Decision">
-            </div>
-          </div>
-        </div>
-      </section>
-      </section>
-      <section class="line">
-      <section class="contact-container">
-        <div class="contact">
-          <h2 class="contact-tittle">Contact us for information about the sistem</h2>
-          <form action="process.php" method="POST">
-            <div>
-              <label>First Name</label>
-              <input class="contact-name" type="text" name="firstName" placeholder="Juan Bautista">
-              <label>Last Name</label>
-              <input class="contact-name" type="text" name="lastName" placeholder="Santomero">
-            </div>
-            <div>
-              <label>Email</label>
-              <input class="contact-email" type="email" name="email" placeholder="example@mycompany.com">
-            </div>
-            <div>
-              <label>Contact area</label>
-              <select class="select-contact" name="contact area">
-                <option value="sales">Sales</option>
-                <option value="support">Support</option>
-              </select>
-            </div>
-            <div>
-              <label>Text area</label>
-              <textarea class="text-area" name="placeholder" placeholder="Placeholder"></textarea>
-            </div>
-            <div>
-              <div class="inputs">
-                <input class="input-submit" type="submit" name="submit" value="Send message">
-                <input class="input-reset" type="submit" name="submit" value="Reset">
+        </section>
+        </section>
+        <section class="line">
+        <section class="features-container">
+          <div class="features">
+            <div class="container-icon">
+              <div class="icon">
+                <img src="Assets/icon-Productivity-booster.png" alt="Productivity">
               </div>
             </div>
-          </form>
-        </div>
-      </section>
-      </section>
-      <section class="line">
-      <section class="container-wwa">
-        <div class="who-we-are">
-          <h2>Who we are</h2>
-          <p>
-            RR time tracker is a web platform that help to manage time at work.
-          </p>
-          <p>
-            What type of application do you have in mind?
-          </p>
-          <p>
-            We're providing you with the core UI kit needed to kickstart your design
-            and development while also allowing you to add new funcionalities
-            to the existing capabilities. 
-          </p>
-        </div>
-      </section>
-      </section>
-      <section class="line">
-      <section class="container-lists">
-        <div class="lists">
-          <h2>Products</h2>
-          <ol>
-            <li><a href="#">Help.</a></li>
-            <li><a href="#">Tutorials.</a></li>
-            <li><a href="#">API.</a></li>
-            <li><A href="#">Contact.</A></li>
-          </ol>
-        </div>
-        <div class="lists">
-          <h2>Company</h2>
-          <ol>
-            <li><a href="#">About us.</a></li>
-            <li><a href="#">Clients.</a></li>
-            <li><a href="#">Resources.</a></li>
-            <li><a href="#">Blog.</a></li>
-          </ol>
-        </div>
-        <div class="lists">
-        <h2>Support</h2>
-          <ul>
-            <li><a href="#">Funtionalities.</a></li>
-            <li><a href="#">Download.</a></li>
-            <li><a href="#">Integrations.</a></li>
-            <li><a href="#">Additionals features.</a></li>
-          </ul>
-        </div>
-      </section>
-      </section>
-    </main>
-    <footer>
-      <a href="#">
-        <img class="logo" src="Assets/fcb.png" alt="Fcb">
-      </a>
-      <a href="#">
-        <img class="logo" src="Assets/in.png" alt="Lnk">
-      </a>
-      <a href="#">
-        <img class="logo" src="Assets/insta.png" alt="Inst">
-      </a>
-      <a href="#">
-        <img class="logo" src="Assets/twt.jpg" alt="Twtt">
-      </a>
-      <p>
-        Copyright &copy; 2022 Trackgenix S.A. All rights reserved.
-      </p>
-    </footer>
+            <div class="text-features"> 
+              <h2>Productivity booster</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </div>
+          </div>
+          <div class="features">
+            <div class="text-features">
+              <h2>Leadership and team managment</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </div>
+            <div class="container-icon">
+              <div class="icon">
+                <img src="Assets/icon-leadership.png" alt="Leadership">
+              </div>
+            </div>
+          </div>
+          <div class="features">
+            <div class="container-icon">
+              <div class="icon">
+                <img src="Assets/icon-work-traceability.png" alt="Work">
+              </div>
+            </div>
+            <div class="text-features">
+              <h2>Work traceability</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </div>
+          </div>
+          <div class="features">
+            <div class="text-features">
+              <h2>Decision making</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </div>
+            <div class="container-icon">
+              <div class="icon">
+                <img src="Assets/icon-decision-making.png" alt="Decision">
+              </div>
+            </div>
+          </div>
+        </section>
+        </section>
+        <section class="line">
+        <section class="contact-container">
+          <div class="contact">
+            <h2 class="contact-tittle">Contact us for information about the sistem</h2>
+            <form action="process.php" method="POST">
+              <div>
+              <label>First Name</label>
+                <input class="contact-name" type="text" name="firstName" placeholder="Juan Bautista">
+                <label>Last Name</label>
+                <input class="contact-name" type="text" name="lastName" placeholder="Santomero">
+              </div>
+              <div>
+                <label>Email</label>
+                <input class="contact-email" type="email" name="email" placeholder="example@mycompany.com">
+              </div>
+              <div>
+                <label>Contact area</label>
+                <select class="select-contact" name="contact area">
+                  <option value="sales">Sales</option>
+                  <option value="support">Support</option>
+                </select>
+              </div>
+              <div>
+                <label>Text area</label>
+                <textarea class="text-area" name="placeholder" placeholder="Placeholder"></textarea>
+              </div>
+              <div>
+                <div class="inputs">
+                  <input class="input-submit" type="submit" name="submit" value="Send message">
+                  <input class="input-reset" type="submit" name="submit" value="Reset">
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        </section>
+        <section class="line">
+        <section class="container-wwa">
+          <div class="who-we-are">
+            <h2>Who we are</h2>
+            <p>
+              RR time tracker is a web platform that help to manage time at work.
+            </p>
+            <p>
+              What type of application do you have in mind?
+            </p>
+            <p>
+              We're providing you with the core UI kit needed to kickstart your design
+              and development while also allowing you to add new funcionalities
+              to the existing capabilities. 
+            </p>
+          </div>
+        </section>
+        </section>
+        <section class="line">
+        <section class="container-lists">
+          <div class="lists">
+            <h2>Products</h2>
+            <ol>
+              <li><a href="#">Help.</a></li>
+              <li><a href="#">Tutorials.</a></li>
+              <li><a href="#">API.</a></li>
+              <li><A href="#">Contact.</A></li>
+            </ol>
+          </div>
+          <div class="lists">
+            <h2>Company</h2>
+            <ol>
+              <li><a href="#">About us.</a></li>
+              <li><a href="#">Clients.</a></li>
+              <li><a href="#">Resources.</a></li>
+              <li><a href="#">Blog.</a></li>
+            </ol>
+          </div>
+          <div class="lists">
+          <h2>Support</h2>
+            <ul>
+              <li><a href="#">Funtionalities.</a></li>
+              <li><a href="#">Download.</a></li>
+              <li><a href="#">Integrations.</a></li>
+              <li><a href="#">Additionals features.</a></li>
+            </ul>
+          </div>
+        </section>
+        </section>
+      </main>
+      <footer>
+        <a href="#">
+          <img class="rs" src="Assets/fcb.png" alt="Fcb">
+        </a>
+        <a href="#">
+          <img class="rs" src="Assets/in.png" alt="Lnk">
+        </a>
+        <a href="#">
+          <img class="rs" src="Assets/insta.png" alt="Inst">
+        </a>
+        <a href="#">
+          <img class="rs" src="Assets/twt.jpg" alt="Twtt">
+        </a>
+        <p>
+          Copyright &copy; 2022 Trackgenix S.A. All rights reserved.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
