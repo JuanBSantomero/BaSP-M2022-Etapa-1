@@ -56,7 +56,6 @@ h1{
     justify-content: center;
     align-items: center;
 }
-
 .features{
     display:flex;
     flex-wrap:flex;
@@ -71,7 +70,6 @@ h1{
     padding-top:2%;
     width: 100%;
 }
-
 .icon{
     display: flex;
     height: 50px;
@@ -108,4 +106,14 @@ h1{
     max-width: 100%;
     padding-top: 20px;
 }
-
+.container-wwa{
+    display: flex;
+    justify-content: center;
+}
+.who-we-are{
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px;
+    width: 100%; 
+    padding: 35px 0px 50px 0px;  
+}

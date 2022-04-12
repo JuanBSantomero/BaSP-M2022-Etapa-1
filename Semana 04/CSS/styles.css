@@ -73,6 +73,22 @@
         font-weight: bold;
         color: #373867;
     }
+    .who-we-are h2{
+        font-family: "Reboto", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #373867;
+        padding-left: 40px;
+        margin-top: 25px;
+    }
+    .who-we-are p{
+        font-family: "Reboto", sans-serif;
+        font-size: 14px;
+        color: #373867;
+        padding-left: 40px;
+        padding-right: 20px;
+        margin-top: 25px;
+    }
 }
 @media (min-width: 820px){
     .header-tittle{
@@ -148,6 +164,22 @@
         font-size: 12px;
         font-weight: bold;
         color: #373867;
+    }
+    .who-we-are h2{
+        font-family: "Reboto", sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #373867;
+        padding-left: 40px;
+        margin-top: 25px;
+    }
+    .who-we-are p{
+        font-family: "Reboto", sans-serif;
+        font-size: 18px;
+        color: #373867;
+        padding-left: 40px;
+        padding-right: 20px;
+        margin-top: 25px;
     }
     .container-hamburguer{
         display: none;
