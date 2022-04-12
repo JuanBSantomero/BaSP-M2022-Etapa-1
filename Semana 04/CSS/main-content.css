@@ -117,3 +117,21 @@ h1{
     width: 100%; 
     padding: 35px 0px 50px 0px;  
 }
+.container-lists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.lists{
+    flex-basis: 30%;
+}
+footer{
+    padding-top: 25px;
+    background-color: #fff;
+    line-height: 30px;
+    width: 100%;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+}
