@@ -16,3 +16,8 @@
  Made the landing page responsive using flex-box.
  https://juanbsantomero.github.io/BaSP-M2022-Etapa-1/Semana%2004/s
  ```
+ ## Week 5
+  ```
+ Resolution of JavaScript problems
+ https://juanbsantomero.github.io/BaSP-M2022-Etapa-1/Semana%2005/
+ ```
