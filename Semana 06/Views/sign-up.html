@@ -5,12 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"  href="../Styles/reset.css">
+    <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="stylesheet" href="../Styles/sign-up.css">
+    <link rel="stylesheet" href="../Styles/footer.css">
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
     <div>
         <aside>
-            <img src="Assets/logo.png">
+            <img src="../Assets/logo.png">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Log in</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </aside>
+    </div>
+    <div>
+        <header>
+            <div class="container-hamburguer">
+                <div class="hamburguer-menu">
+                <img src="../Assets/hamburguer 1.png" alt="hamburguer">
+                </div>
+            </div>
+            <div class="header-tittle">
+                <h1>Trackgenix SA</h1>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2>Sign Up</h2>
+                <form>
+                    <div>
+                        <label>First Name</label>
+                        <input type="text" name="firstName">
+                    </div>
+                    <div>
+                        <label>Last Name</label>
+                        <input type="text" name="lastName">
+                    </div>
+                    <div>
+                        <label>DNI</label>
+                        <input type="text" name="DNI">
+                    </div>
+                    <div>
+                        <label>Birth Date</label>
+                        <input type="text" name="birthDate">
+                    </div>
+                    <div>
+                        <label>Phone</label>
+                        <input type="text" name="Phone">
+                    </div>
+                    <div>
+                        <label>Adress</label>
+                        <input type="text" name="Adress">
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="City">
+                    </div>
+                    <div>
+                        <label>Post Code</label>
+                        <input type="text" name="postCode">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name="Email">
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input type="text" name="Password">
+                    </div>
+                    <div>
+                        <label>Repeat Password</label>
+                        <input type="text" name="repeatPassword">
+                    </div>
+                    <div>
+                        <input class="input-submit" type="submit" name="submit" value="Submit">
+                        <input class="input-reset" type="submit" name="submit" value="Reset">
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <a href="#">
+                <img class="rs" src="../Assets/fcb.png" alt="Fcb">
+              </a>
+              <a href="#">
+                <img class="rs" src="../Assets/in.png" alt="Lnk">
+              </a>
+              <a href="#">
+                <img class="rs" src="../Assets/insta.png" alt="Inst">
+              </a>
+              <a href="#">
+                <img class="rs" src="../Assets/twt.jpg" alt="Twtt">
+              </a>
+              <p>
+                Copyright &copy; 2022 Trackgenix S.A. All rights reserved.
+              </p>
+        </footer>
     </div>
 </body>
 </html>
