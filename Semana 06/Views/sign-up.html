@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"  href="../Styles/reset.css">
-    <link rel="stylesheet" href="../Styles/header.css">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="../Styles/reset.css">
     <link rel="stylesheet" href="../Styles/sign-up.css">
+    <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="stylesheet" href="../Styles/sidebar.css">
     <link rel="stylesheet" href="../Styles/footer.css">
-    <link rel="stylesheet" href="../Styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-    <div>
-        <aside>
-            <img src="../Assets/logo.png">
+    <div class="sidebar-container">
+        <aside class="sidebar">
+            <img class="logo" src="../Assets/logo.png">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Log in</a></li>
+                <li><a href="../Views/index.html">Home</a></li>
+                <li><a href="../Views/sign-up.html">Sign Up</a></li>
+                <li><a href="../Views/login.html">Log in</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </aside>
@@ -28,7 +28,7 @@
         <header>
             <div class="container-hamburguer">
                 <div class="hamburguer-menu">
-                <img src="../Assets/hamburguer 1.png" alt="hamburguer">
+                    <img src="../Assets/hamburguer 1.png" alt="hamburguer">
                 </div>
             </div>
             <div class="header-tittle">
@@ -41,47 +41,47 @@
                 <form>
                     <div>
                         <label>First Name</label>
-                        <input type="text" name="firstName">
+                        <input type="text" name="firstName" placeholder="Juan Bautista">
                     </div>
                     <div>
                         <label>Last Name</label>
-                        <input type="text" name="lastName">
+                        <input type="text" name="lastName" placeholder="Santomero">
                     </div>
                     <div>
                         <label>DNI</label>
-                        <input type="text" name="DNI">
+                        <input type="text" name="DNI" placeholder="DNI">
                     </div>
                     <div>
                         <label>Birth Date</label>
-                        <input type="text" name="birthDate">
+                        <input type="text" name="birthDate" placeholder="dd/mm/aaaa">
                     </div>
                     <div>
                         <label>Phone</label>
-                        <input type="text" name="Phone">
+                        <input type="text" name="Phone" placeholder="Phone">
                     </div>
                     <div>
                         <label>Adress</label>
-                        <input type="text" name="Adress">
+                        <input type="text" name="Adress" placeholder="Adress">
                     </div>
                     <div>
                         <label>City</label>
-                        <input type="text" name="City">
+                        <input type="text" name="City" placeholder="City">
                     </div>
                     <div>
                         <label>Post Code</label>
-                        <input type="text" name="postCode">
+                        <input type="text" name="postCode" placeholder="Post Code">
                     </div>
                     <div>
                         <label>Email</label>
-                        <input type="text" name="Email">
+                        <input type="text" name="Email" placeholder="example@mycompany.com">
                     </div>
                     <div>
                         <label>Password</label>
-                        <input type="text" name="Password">
+                        <input type="password" id="pwd" name="pwd" placeholder="Password">
                     </div>
                     <div>
                         <label>Repeat Password</label>
-                        <input type="text" name="repeatPassword">
+                        <input type="password" id="pwd" name="pwd" placeholder="Password">
                     </div>
                     <div>
                         <input class="input-submit" type="submit" name="submit" value="Submit">
@@ -93,20 +93,21 @@
         <footer>
             <a href="#">
                 <img class="rs" src="../Assets/fcb.png" alt="Fcb">
-              </a>
-              <a href="#">
+            </a>
+            <a href="#">
                 <img class="rs" src="../Assets/in.png" alt="Lnk">
-              </a>
+            </a>
               <a href="#">
                 <img class="rs" src="../Assets/insta.png" alt="Inst">
-              </a>
-              <a href="#">
+            </a>
+            <a href="#">
                 <img class="rs" src="../Assets/twt.jpg" alt="Twtt">
-              </a>
-              <p>
+            </a>
+            <p>
                 Copyright &copy; 2022 Trackgenix S.A. All rights reserved.
-              </p>
+            </p>
         </footer>
     </div>
+    <script src="../JavaScript/sign-up.js"></script>
 </body>
 </html>

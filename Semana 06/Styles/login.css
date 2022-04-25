@@ -1,0 +1,68 @@
+@media (max-width: 1024px){
+    .sidebar-container{
+        display: none;
+    }
+}
+@media (min-width: 1024px){
+    .sidebar-container{
+        width: 20%;
+    }
+}
+.line{
+    border-bottom: 1px solid black;
+    padding: 25px 0px 7% 0px;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+}
+.login-box{
+    background-color: #fff;
+    border-radius: 40px;
+    width: 40%;
+    box-shadow: 5px 5px 10px;
+    padding: 65px;
+}
+.login-box h2{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+.icon{
+    padding-right: 10px ;
+}
+.email-form{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+.email-form label{
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+.password-form{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+.password-form label{
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+.checkbox{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+.input-login{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+span{
+    display: none;
+    margin-bottom: 15px;
+    color: red;
+}
