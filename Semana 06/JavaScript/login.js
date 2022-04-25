@@ -44,10 +44,10 @@ function writingEmail(e){
 password.addEventListener("blur",validatePassword)
 function validatePassword(e){
     for(i=0;i<password.value.length;i++) {
-        if(passwordLetters.includes(password[i])){
+        if(passwordLetters.includes(password.value[i])){
             numbers++;
         }
-        else if(passwordNumbers.includes(password[i])){
+        else if(passwordNumbers.includes(password.value[i])){
             characters++;
         }
     }
