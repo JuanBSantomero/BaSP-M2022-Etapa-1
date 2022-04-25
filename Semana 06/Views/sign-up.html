@@ -1,91 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up</title>
-    <link rel="stylesheet" href="../Styles/reset.css">
-    <link rel="stylesheet" href="../Styles/sign-up.css">
-    <link rel="stylesheet" href="../Styles/header.css">
-    <link rel="stylesheet" href="../Styles/sidebar.css">
-    <link rel="stylesheet" href="../Styles/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-</head>
-<body>
-    <div class="sidebar-container">
-        <aside class="sidebar">
-            <img class="logo" src="../Assets/logo.png">
-            <ul>
-                <li><a href="../Views/index.html">Home</a></li>
-                <li><a href="../Views/sign-up.html">Sign Up</a></li>
-                <li><a href="../Views/login.html">Log in</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </aside>
-    </div>
-    <div>
-        <header>
-            <div class="container-hamburguer">
-                <div class="hamburguer-menu">
-                    <img src="../Assets/hamburguer 1.png" alt="hamburguer">
-                </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign-Up</title>
+        <link rel="stylesheet" href="../Styles/reset.css">
+        <link rel="stylesheet" href="../Styles/sign-up.css">
+        <!-- <link rel="stylesheet" href="../Styles/header.css">
+            <link rel="stylesheet" href="../Styles/sidebar.css">
+            <link rel="stylesheet" href="../Styles/footer.css"> -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+        </head>
+        <body>
+            <div class="sidebar-container">
+                <aside class="sidebar">
+                    <img class="logo" src="../Assets/logo.png">
+                    <ul>
+                        <li><a href="../Views/index.html">Home</a></li>
+                        <li><a href="../Views/sign-up.html">Sign Up</a></li>
+                        <li><a href="../Views/login.html">Log in</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </aside>
             </div>
-            <div class="header-tittle">
-                <h1>Trackgenix SA</h1>
-            </div>
-        </header>
-        <main>
-            <section>
-                <h2>Sign Up</h2>
-                <form>
-                    <div>
-                        <label>First Name</label>
-                        <input type="text" name="firstName" placeholder="Juan Bautista">
+            <div>
+                <header>
+                    <div class="container-hamburguer">
+                        <div class="hamburguer-menu">
+                            <img src="../Assets/hamburguer 1.png" alt="hamburguer">
+                        </div>
                     </div>
+                    <div class="header-tittle">
+                        <h1>Trackgenix SA</h1>
+                    </div>
+                </header>
+                <main>
+                    <section>
+                        <h2>Sign Up</h2>
+                        <form id="form">
+                            <div>
+                        <label>First Name</label>
+                        <input id="first-name" type="text" name="firstName" placeholder="Juan Bautista">
+                    </div>
+                    <span id="fname-required"> First name is required</span>
+                    <span id="invalid-fname"> The first name is not valid</span>
                     <div>
                         <label>Last Name</label>
-                        <input type="text" name="lastName" placeholder="Santomero">
+                        <input id="last-name" type="text" name="lastName" placeholder="Santomero">
                     </div>
+                    <span id="lname-required"> Last name is required</span>
+                    <span id="invalid-lname"> The last name is not valid</span>
                     <div>
                         <label>DNI</label>
-                        <input type="text" name="DNI" placeholder="DNI">
+                        <input id="DNI" type="text" name="DNI" placeholder="DNI">
                     </div>
+                    <span id="DNI-required"> DNI is required</span>
+                    <span id="DNI-invalid"> The DNI is not valid</span>
                     <div>
                         <label>Birth Date</label>
-                        <input type="text" name="birthDate" placeholder="dd/mm/aaaa">
+                        <input id="birth-date" type="date" name="birthDate">
                     </div>
+                    <span id="BDate-required"> Birth date is required</span>
+                    <span id="BDate-invalid"> The birth date is not valid</span>
                     <div>
                         <label>Phone</label>
-                        <input type="text" name="Phone" placeholder="Phone">
+                        <input id="phone" type="text" name="Phone" placeholder="Phone">
                     </div>
+                    <span id="Phone-required"> Phone is required</span>
+                    <span id="Phone-invalid"> The phone is not valid</span>
                     <div>
                         <label>Adress</label>
-                        <input type="text" name="Adress" placeholder="Adress">
+                        <input id="adress" type="text" name="Adress" placeholder="Adress">
                     </div>
+                    <span id="Adress-required"> Adress is required</span>
+                    <span id="Adress-invalid"> The adress is not valid</span>
                     <div>
                         <label>City</label>
-                        <input type="text" name="City" placeholder="City">
+                        <input id="city" type="text" name="City" placeholder="City">
                     </div>
+                    <span id="City-required"> City is required</span>
+                    <span id="City-invalid"> The city is not valid</span>
                     <div>
                         <label>Post Code</label>
-                        <input type="text" name="postCode" placeholder="Post Code">
+                        <input id="post-code" type="text" name="postCode" placeholder="Post Code">
                     </div>
+                    <span id="PCode-required"> Post code is required</span>
+                    <span id="PCode-invalid"> The post code is not valid</span>
                     <div>
                         <label>Email</label>
-                        <input type="text" name="Email" placeholder="example@mycompany.com">
+                        <input id="email" type="text" name="Email" placeholder="example@mycompany.com">
                     </div>
+                    <span id="error-email"> Email is incorrect</span>
+                    <span id="email-required"> Email is required</span>
                     <div>
                         <label>Password</label>
-                        <input type="password" id="pwd" name="pwd" placeholder="Password">
+                        <input id="password" type="password" name="pwd" placeholder="Password">
                     </div>
+                    <span id="error-password"> Password incorrect</span>
+                    <span id="password-required"> Password is required</span>
                     <div>
                         <label>Repeat Password</label>
-                        <input type="password" id="pwd" name="pwd" placeholder="Password">
+                        <input id="repear-password" id="repeat-password" type="password" name="pwd" placeholder="Password">
                     </div>
+                    <span id="password-doesnt-match"> Password does not match</span>
+                    <span id="passwordcon-required"> Password is required</span>
                     <div>
-                        <input class="input-submit" type="submit" name="submit" value="Submit">
-                        <input class="input-reset" type="submit" name="submit" value="Reset">
+                        <input id="input-signup" type="submit" name="submit" value="Submit">
+                        <input id="input-reset" type="submit" name="submit" value="Reset">
                     </div>
                 </form>
             </section>
@@ -97,7 +119,7 @@
             <a href="#">
                 <img class="rs" src="../Assets/in.png" alt="Lnk">
             </a>
-              <a href="#">
+            <a href="#">
                 <img class="rs" src="../Assets/insta.png" alt="Inst">
             </a>
             <a href="#">
@@ -107,7 +129,7 @@
                 Copyright &copy; 2022 Trackgenix S.A. All rights reserved.
             </p>
         </footer>
+        <script src="../JavaScript/sign-up.js"></script>
     </div>
-    <script src="../JavaScript/sign-up.js"></script>
 </body>
 </html>
