@@ -26,7 +26,7 @@ var cityRequired = document.getElementById("City-required");
 var cityInvalid = document.getElementById("City-invalid");
 var pCodeRequired = document.getElementById("PCode-required");
 var pCodeInvalid = document.getElementById("PCode-invalid");
-var requiredEmail = document.getElementById("error-required");
+var requiredEmail = document.getElementById("email-required");
 var emailError = document.getElementById("error-email");
 var requiredPassword = document.getElementById("password-required");
 var passwordError = document.getElementById("error-password");
@@ -219,3 +219,156 @@ function writtingAdress(e){
     adressInvalid.style.display = "none";
     adress.style.border = "solid 2px black";
 }
+city.addEventListener("blur", validateCity)
+function validateCity(e){
+    var LetNum = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j",
+    "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
+    "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+    "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
+    "X", "Y", "Z", " ", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var CityCh =0;
+    var CitySm =0;
+    for(i=0; i<city.value.length;i++){
+        if(!LetNum.includes(city.value[i])){
+            CitySm++
+        }
+        if(LetNum.includes(city.value[i])){
+            CityCh++
+        }
+    }
+    if(city.value === ""){
+        cityRequired.style.display = "block";
+        city.style.border = "solid 2px red";
+        return false;
+    }
+    else if(city.value.length<3 || CityCh<1 || CitySm>0){
+        cityInvalid.style.display = "block";
+        city.style.border = "solid 2px red";
+    }
+}
+city.addEventListener("focus", writtingCity)
+function writtingCity(e){
+    cityRequired.style.display = "none";
+    cityInvalid.style.display = "none";
+    city.style.border = "solid 2px black";
+}
+postCode.addEventListener("blur", validatePostCode)
+function validatePostCode(e){
+    var Numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var PCNum =0;
+    var PCSm =0;
+    for(i=0;i<postCode.value.length;i++){
+        if(!Numbers.includes(postCode.value[i])){
+            PCSm++
+        }
+        if(Numbers.includes(postCode.value[i])){
+            PCNum++
+        }
+    }
+    if (postCode.value === ""){
+        pCodeRequired.style.display = "block";
+        postCode.style.border = "solid 2px red";
+        return false;
+    }
+    else if (postCode.value.length<4 || postCode.value.length>5 || PCNum<1 || PCSm>0){
+        pCodeInvalid.style.display = "block";
+        postCode.style.border = "solid 2px red";
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+postCode.addEventListener("focus", writtingPostCode)
+function writtingPostCode(e){
+    pCodeRequired.style.display = "none";
+    pCodeInvalid.style.display = "none";
+    postCode.style.border = "solid 2px black";
+}
+
+email.addEventListener( "blur", validateEmail)
+function validateEmail(e){
+    var emailreg = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
+    if(email.value === ""){
+        requiredEmail.style.display = "block";
+        email.style.border = "solid 2px red";
+    }
+    else{
+        if(!emailreg.test(email.value)){
+            emailError.style.display = "block";
+            email.style.border = "solid 2px red";
+            return false
+        }
+        else{
+            return true
+        }
+    }
+}
+email.addEventListener("focus", writingEmail)
+function writingEmail(e){
+    requiredEmail.style.display = "none";
+    emailError.style.display ="none";
+    email.style.border = "solid 2px black";
+}
+
+password.addEventListener("blur", validatePassword)
+function validatePassword(e){
+    var Letters = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j",
+    "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
+    "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+    "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
+    "X", "Y", "Z", " "];
+    var Numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var PwdLet = 0;
+    var PwdNum = 0;
+    var PwdSm= 0;
+    for(i=0;i<password.value.length;i++){
+        if(!Letters.includes(password.value[i]) && !Numbers.includes(password.value[i])){
+            PwdSm++
+        }
+        if(Letters.includes(password.value[i])){
+            PwdLet++
+        }
+        if(Numbers.includes(password.value[i])){
+            PwdNum++
+        }
+    }
+    if (password.value === ""){
+        requiredPassword.style.display = "block";
+        password.style.border = "solid 2px red";
+        return false
+    }
+    else if(password.value.length<8 || PwdLet<1 || PwdNum<1 || PwdSm>0){
+        passwordError.style.display = "block";
+        password.style.border = "solid 2px red";
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+password.addEventListener ("focus", writtingPassword)
+function writtingPassword(e){
+    requiredPassword.style.display = "none";
+    passwordError.style.display = "none";
+    password.style.border = "solid 2px black";
+}
+
+repPassword.addEventListener("blur",repeatPassword)
+function repeatPassword(e){
+    if(repPassword.value === ""){
+        passwordConRequired.style.display = "block";
+        repPassword.style.border = "solid 2px red";
+    }
+    else if (repPassword.value !== password.value){
+        passwordNotMatch.style.display = "block";
+        repPassword.style.border = "solid 2px red";
+    }
+}
+repPassword.addEventListener("focus", repeatingPassword)
+function repeatingPassword(e){
+    passwordConRequired.style.display = "none";
+    passwordNotMatch.style.display = "none";
+    repPassword.style.border = "solid 2px black"
+}
+
