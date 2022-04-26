@@ -45,7 +45,7 @@ function validateFName(e){
     "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
     "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
     "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
-    "X", "Y", "Z"];
+    "X", "Y", "Z", " "];
     var FNCh = 0;
     var FNSm = 0;
     for(i=0;i<firstName.value.length;i++){
@@ -59,22 +59,22 @@ function validateFName(e){
     if (firstName.value ===""){
         fNameRequired.style.display = "block";
         firstName.style.border = "solid 2px red";
-        return false
+        return false;
     }
     else if(firstName.value.length<3 || FNCh<1 || FNSm>0){
         fNameInvalid.style.display ="block";
         firstName.style.border = "solid 2px red";
-        return false
+        return false;
     }
     else{
-        return true
+        return true;
     }   
 }
 firstName.addEventListener("focus", writtingName)
 function writtingName(e){
     fNameInvalid.style.display = "none";
     fNameRequired.style.display = "none";
-    firstName.style.border = "solid 2px black"
+    firstName.style.border = "solid 2px black";
 }
 
 lastName.addEventListener("blur", validateLName)
@@ -83,7 +83,7 @@ function validateLName(e){
     "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
     "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
     "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
-    "X", "Y", "Z"];
+    "X", "Y", "Z"," "];
     var LNCh = 0;
     var LNSm = 0;
     for(i=0;i<lastName.value.length;i++){
@@ -99,7 +99,7 @@ function validateLName(e){
         lastName.style.border ="solid 2px red";
         return false;
     }
-    else if (lastName.value.length<3 || LNCh<1 || LNCh>0){
+    else if (lastName.value.length<3 || LNCh<1 || LNSm>0){
         lNameInvalid.style.display = "block";
         lastName.style.border ="solid 2px red";
         return false;
@@ -114,6 +114,7 @@ function writtingLName(e){
     lNameInvalid.style.display = "none";
     lastName.style.border = "solid 2px black";
 }
+
 DNI.addEventListener("blur", validateDNI)
 function validateDNI(e){
     var Numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -143,3 +144,78 @@ function writtingDNI(e){
     DNI.style.border = "solid 2px black";
 }
 
+phone.addEventListener("blur", validatePhone)
+function validatePhone(e){
+    var Numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var PhNum = 0;
+    var PhSm = 0;
+    for(i=0;i<phone.value.length;i++){
+        if(!Numbers.includes(phone.value[i])){
+            PhSm++
+        }
+        if(Numbers.includes(phone.value[i])){
+            PhNum++
+        }
+    }
+    if (phone.value === ""){
+        phoneRequired.style.display = "block";
+        phone.style.border = "solid 2px red";
+        return false;
+    }
+    else if (phone.value.length<10 || PhNum<1 || PhSm> 0){
+        phoneInvalid.style.display = "block";
+        phone.style.border = "solid 2px red";
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+phone.addEventListener("focus", writtingPhone)
+function writtingPhone(e){
+    phoneRequired.style.display = "none";
+    phoneInvalid.style.display = "none";
+    phone.style.border = "solid 2px black"
+}
+adress.addEventListener("blur", validateAdress)
+function validateAdress(e){
+    var Letters = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j",
+    "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
+    "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+    "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
+    "X", "Y", "Z", " "];
+    var Numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var AdCh = 0;
+    var AdNum = 0;
+    var AdSm = 0;
+    for(i=0;i<adress.value.length;i++){
+        if(!Letters.includes(adress.value[i]) && !Numbers.includes(adress.value[i])){
+            AdSm++
+        }
+        if(Letters.includes(adress.value[i])){
+            AdCh++
+        }
+        if(Numbers.includes(adress.value[i])){
+            AdNum++
+        }
+    }
+    if(adress.value ===""){
+        adressRequired.style.display = "block";
+        adress.style.border = "solid 2px red";
+        return false;
+    }
+    else if(adress.value.length<5 || AdCh<1 || AdNum<1 || AdSm>0){
+        adressInvalid.style.display = "block";
+        adress.style.border = "solid 2px red";
+        return false;
+    }
+    else{
+        return true;
+    }   
+}
+adress.addEventListener("focus", writtingAdress)
+function writtingAdress(e){
+    adressRequired.style.display = "none";
+    adressInvalid.style.display = "none";
+    adress.style.border = "solid 2px black";
+}
