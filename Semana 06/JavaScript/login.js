@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
     else if (!validateEmail() || !validatePassword()){
         loginComplete.classList.add("loginComplete");
         loginComplete.innerHTML = "Email incorrect or password incorrect"+"<p></p>" + "Email: "+email.value+"<p></p>"+
-        + "Password: "+password.value+"</p>";
+        "Password: "+password.value+"</p>";
 
     }
 })
@@ -54,11 +54,11 @@ function writingEmail(e){
 
 password.addEventListener("blur",validatePassword)
 function validatePassword(e){
-    var passwordLetters = ["a", "b", "C", "d", "e",
+    var passwordLetters = ["a", "b", "c", "d", "e",
     "f","g","h","i","j","k","l","m","n","o",
-    "p","q","r","s","u","v","w","x","y","z",
+    "p","q","r","s","t","u","v","w","x","y","z",
     "A","B","C","D","E","F","G","H","I","J",
-    "K","L","M","N","O","P","Q","R","S","U",
+    "K","L","M","N","O","P","Q","R","S","T","U",
     "V","W","X","Y","Z"]
     var passwordNumbers = ["0","1","2","3","4","5","6","7","8","9"]
     var numbers = 0;
@@ -81,7 +81,7 @@ function validatePassword(e){
         password.style.border = "solid 2px red";
         return false;
     }
-    else if(password.value.length<8 || simbols>0 || numbers<1 || characters<1){
+    else if(password.value.length<8 || characters<1 || numbers<1 || simbols>0){
         passwordError.style.display = "flex";
         passwordError.style.justifyContent = "center";
         password.style.border = "solid 2px red";

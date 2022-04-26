@@ -34,9 +34,44 @@ var passwordConRequired = document.getElementById("passwordcon-required");
 var passwordNotMatch = document.getElementById("password-doesnt-match")
 var signUp = document.getElementById("input-signup");
 var reset = document.getElementById("input-reset");
+var signUpComplete = document.getElementById("sign-up Complete");
 
 form.addEventListener("submit", (e) =>{
     e.preventDefault();
+    if(validateFName() && validateLName() && validateDNI() && validateDate && validatePhone &&
+    validateAdress() && validateCity() && validatePostCode() && validateEmail && validatePassword &&
+    repeatPassword()){
+       signUpComplete.classList.add("signUpComplete");
+       signUpComplete.innerHTML = "Sign-Up Complete"+"<p></p>"
+       +"First Name: "+firstName.value+"<p></p>"
+       +"Last Name: "+lastName.value+"<p></p>"
+       +"DNI: "+DNI.value+"<p></p>"
+       +"Birth date: "+birthDate.value+"<p></p>"
+       +"Phone: "+phone.value+"<p></p>"
+       +"Adress: "+adress.value+"<p></p>"
+       +"City: "+city.value+"<p></p>"
+       +"Post-Code: "+postCode.value+"<p></p>"
+       +"Email: "+email.value+"<p></p>"
+       +"Password: "+password.value+"<p></p>"
+       +"Repeat Password: "+repPassword.value+"</p>"
+    }
+    else if(!validateFName() || !validateLName() || !validateDNI() || !validateDate || !validatePhone ||
+    !validateAdress() || !validateCity() || !validatePostCode() || !validateEmail || !validatePassword ||
+    !repeatPassword()){
+       signUpComplete.classList.add("signUpComplete");
+       signUpComplete.innerHTML = "Sign-Up Error"+"<p></p>"
+       +"First Name: "+firstName.value+"<p></p>"
+       +"Last Name: "+lastName.value+"<p></p>"
+       +"DNI: "+DNI.value+"<p></p>"
+       +"Birth date: "+birthDate.value+"<p></p>"
+       +"Phone: "+phone.value+"<p></p>"
+       +"Adress: "+adress.value+"<p></p>"
+       +"City: "+city.value+"<p></p>"
+       +"Post-Code: "+postCode.value+"<p></p>"
+       +"Email: "+email.value+"<p></p>"
+       +"Password: "+password.value+"<p></p>"
+       +"Repeat Password: "+repPassword.value+"</p>"
+    }
 })
 
 firstName.addEventListener("blur", validateFName)
@@ -67,6 +102,7 @@ function validateFName(e){
         return false;
     }
     else{
+        firstName.style.border = "solid 2px green"
         return true;
     }   
 }
@@ -105,6 +141,7 @@ function validateLName(e){
         return false;
     }
     else{
+        lastName.style.border = "solid 2px green"
         return true;
     }
 }
@@ -131,10 +168,16 @@ function validateDNI(e){
     if(DNI.value === ""){
         DNIrequired.style.display = "block";
         DNI.style.border = "solid 2px red";
+        return false;
     }
     else if(DNI.value.length<7 || DNINum<1 || DNISm>0){
         DNIinvalid.style.display = "block";
         DNI.style.border = "solid 2px red";
+        return false;
+    }
+    else{
+        DNI.style.border = "solid 2px green";
+        return true;
     }
 }
 DNI.addEventListener("focus", writtingDNI)
@@ -142,6 +185,37 @@ function writtingDNI(e){
     DNIrequired.style.display = "none";
     DNIinvalid.style.display = "none";
     DNI.style.border = "solid 2px black";
+}
+
+function getAge(date){
+    var today = new Date();
+    var BirthDt = new Date(date);
+    var age = today.getFullYear() - BirthDt.getFullYear();
+    return age;
+}
+birthDate.addEventListener("blur", validateDate)
+function validateDate(e){
+    age = e.target.value
+    if(birthDate.value === ""){
+        bDateRequired.style.display = "block";
+        birthDate.style.border = "solid 2px red";
+        return false;
+    }
+    else if(getAge(age) <18){
+        bDateInvalid.style.display = "block";
+        birthDate.style.border = "solid 2px red";
+        return false;
+    }
+    else{
+        birthDate.style.border = "solid 2px green";
+        return true;
+    }
+}
+birthDate.addEventListener("focus",selectDate)
+function selectDate(e){
+    bDateRequired.style.display = "none";
+    bDateInvalid.style.display = "none";
+    birthDate.style.border = "solid 2px black"
 }
 
 phone.addEventListener("blur", validatePhone)
@@ -168,6 +242,7 @@ function validatePhone(e){
         return false;
     }
     else{
+        phone.style.border = "solid 2px green"
         return true;
     }
 }
@@ -210,6 +285,7 @@ function validateAdress(e){
         return false;
     }
     else{
+        adress.style.border = "solid 2px green"
         return true;
     }   
 }
@@ -244,6 +320,11 @@ function validateCity(e){
     else if(city.value.length<3 || CityCh<1 || CitySm>0){
         cityInvalid.style.display = "block";
         city.style.border = "solid 2px red";
+        return false;
+    }
+    else{
+        city.style.border = "solid 2px green";
+        return true;
     }
 }
 city.addEventListener("focus", writtingCity)
@@ -276,6 +357,7 @@ function validatePostCode(e){
         return false;
     }
     else{
+        postCode.style.border = "solid 2px green";
         return true;
     }
 }
@@ -300,6 +382,7 @@ function validateEmail(e){
             return false
         }
         else{
+            email.style.border = "solid 2px green";
             return true
         }
     }
@@ -344,6 +427,7 @@ function validatePassword(e){
         return false;
     }
     else{
+        password.style.border = "solid 2px green";
         return true;
     }
 }
@@ -359,10 +443,16 @@ function repeatPassword(e){
     if(repPassword.value === ""){
         passwordConRequired.style.display = "block";
         repPassword.style.border = "solid 2px red";
+        return false;
     }
     else if (repPassword.value !== password.value){
         passwordNotMatch.style.display = "block";
         repPassword.style.border = "solid 2px red";
+        return false;
+    }
+    else{
+        repPassword.style.border = "solid 2px green";
+        return true;
     }
 }
 repPassword.addEventListener("focus", repeatingPassword)
