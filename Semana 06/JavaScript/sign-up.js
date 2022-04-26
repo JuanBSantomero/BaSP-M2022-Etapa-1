@@ -184,7 +184,7 @@ function validateAdress(e){
     "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
     "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
     "X", "Y", "Z", " "];
-    var Numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var Numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
     var AdCh = 0;
     var AdNum = 0;
     var AdSm = 0;
@@ -204,7 +204,7 @@ function validateAdress(e){
         adress.style.border = "solid 2px red";
         return false;
     }
-    else if(adress.value.length<5 || AdCh<1 || AdNum<1 || AdSm>0){
+    else if(adress.value.length<5 || AdCh<1 || AdNum<1 || AdSm>1){
         adressInvalid.style.display = "block";
         adress.style.border = "solid 2px red";
         return false;
