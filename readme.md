@@ -21,3 +21,8 @@
  Resolution of JavaScript problems
  https://juanbsantomero.github.io/BaSP-M2022-Etapa-1/Semana%2005/
  ```
+  ## Week 6
+  ```
+ Resolution of JavaScript problems
+ https://juanbsantomero.github.io/BaSP-M2022-Etapa-1/Semana%2006/Views
+ ```
