@@ -71,15 +71,9 @@ span{
     justify-content: center;
 }
 .loginComplete{
-    display: block;
     background-color: #fff;
     border-radius: 40px;
     width: 40%;
     box-shadow: 5px 5px 10px;
-    padding: 65px;
-    color: black;
-}
-.classList{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    padding: 80px;
 }

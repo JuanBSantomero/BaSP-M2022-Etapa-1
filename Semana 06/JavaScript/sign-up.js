@@ -92,12 +92,14 @@ function validateFName(e){
         }
     }
     if (firstName.value ===""){
-        fNameRequired.style.display = "block";
+        fNameRequired.style.display = "flex";
+        fNameRequired.style.justifyContent = "center";
         firstName.style.border = "solid 2px red";
         return false;
     }
     else if(firstName.value.length<3 || FNCh<1 || FNSm>0){
-        fNameInvalid.style.display ="block";
+        fNameInvalid.style.display ="flex";
+        fNameInvalid.style.justifyContent = "center";
         firstName.style.border = "solid 2px red";
         return false;
     }
@@ -131,12 +133,14 @@ function validateLName(e){
         }
     }
     if (lastName.value ===""){
-        lNameRequired.style.display = "block";
+        lNameRequired.style.display = "flex";
+        lNameRequired.style.justifyContent = "center"
         lastName.style.border ="solid 2px red";
         return false;
     }
     else if (lastName.value.length<3 || LNCh<1 || LNSm>0){
-        lNameInvalid.style.display = "block";
+        lNameInvalid.style.display = "flex";
+        lNameInvalid.style.display = "center";
         lastName.style.border ="solid 2px red";
         return false;
     }
@@ -166,12 +170,14 @@ function validateDNI(e){
         }
     }
     if(DNI.value === ""){
-        DNIrequired.style.display = "block";
+        DNIrequired.style.display = "flex";
+        DNIrequired.style.justifyContent = "center";
         DNI.style.border = "solid 2px red";
         return false;
     }
     else if(DNI.value.length<7 || DNINum<1 || DNISm>0){
-        DNIinvalid.style.display = "block";
+        DNIinvalid.style.display = "flex";
+        DNIinvalid.style.justifyContent = "center";
         DNI.style.border = "solid 2px red";
         return false;
     }
@@ -189,20 +195,22 @@ function writtingDNI(e){
 
 function getAge(date){
     var today = new Date();
-    var BirthDt = new Date(date);
-    var age = today.getFullYear() - BirthDt.getFullYear();
+    var birthDt = new Date(date);
+    var age = today.getFullYear() - birthDt.getFullYear();
     return age;
 }
 birthDate.addEventListener("blur", validateDate)
 function validateDate(e){
     age = e.target.value
     if(birthDate.value === ""){
-        bDateRequired.style.display = "block";
+        bDateRequired.style.display = "flex";
+        bDateRequired.style.justifyContent = "center";
         birthDate.style.border = "solid 2px red";
         return false;
     }
     else if(getAge(age) <18){
-        bDateInvalid.style.display = "block";
+        bDateInvalid.style.display = "flex";
+        bDateInvalid.style.justifyContent = "center";
         birthDate.style.border = "solid 2px red";
         return false;
     }
@@ -232,12 +240,14 @@ function validatePhone(e){
         }
     }
     if (phone.value === ""){
-        phoneRequired.style.display = "block";
+        phoneRequired.style.display = "flex";
+        phoneRequired.style.justifyContent = "center";
         phone.style.border = "solid 2px red";
         return false;
     }
     else if (phone.value.length<10 || PhNum<1 || PhSm> 0){
-        phoneInvalid.style.display = "block";
+        phoneInvalid.style.display = "flex";
+        phoneInvalid.style.justifyContent = "center";
         phone.style.border = "solid 2px red";
         return false;
     }
@@ -275,12 +285,14 @@ function validateAdress(e){
         }
     }
     if(adress.value ===""){
-        adressRequired.style.display = "block";
+        adressRequired.style.display = "flex";
+        adressRequired.style.justifyContent = "center";
         adress.style.border = "solid 2px red";
         return false;
     }
     else if(adress.value.length<5 || AdCh<1 || AdNum<1 || AdSm>1){
-        adressInvalid.style.display = "block";
+        adressInvalid.style.display = "flex";
+        adressInvalid.style.justifyContent = "center";
         adress.style.border = "solid 2px red";
         return false;
     }
@@ -313,12 +325,14 @@ function validateCity(e){
         }
     }
     if(city.value === ""){
-        cityRequired.style.display = "block";
+        cityRequired.style.display = "flex";
+        cityRequired.style.justifyContent = "center";
         city.style.border = "solid 2px red";
         return false;
     }
     else if(city.value.length<3 || CityCh<1 || CitySm>0){
-        cityInvalid.style.display = "block";
+        cityInvalid.style.display = "flex";
+        cityInvalid.style.justifyContent = "center";
         city.style.border = "solid 2px red";
         return false;
     }
@@ -347,12 +361,14 @@ function validatePostCode(e){
         }
     }
     if (postCode.value === ""){
-        pCodeRequired.style.display = "block";
+        pCodeRequired.style.display = "flex";
+        pCodeRequired.style.justifyContent = "center";
         postCode.style.border = "solid 2px red";
         return false;
     }
     else if (postCode.value.length<4 || postCode.value.length>5 || PCNum<1 || PCSm>0){
-        pCodeInvalid.style.display = "block";
+        pCodeInvalid.style.display = "flex";
+        pCodeInvalid.style.justifyContent = "center";
         postCode.style.border = "solid 2px red";
         return false;
     }
@@ -372,12 +388,15 @@ email.addEventListener( "blur", validateEmail)
 function validateEmail(e){
     var emailreg = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
     if(email.value === ""){
-        requiredEmail.style.display = "block";
+        requiredEmail.style.display = "flex";
+        requiredEmail.style.justifyContent = "center";
         email.style.border = "solid 2px red";
+        return false;
     }
     else{
         if(!emailreg.test(email.value)){
-            emailError.style.display = "block";
+            emailError.style.display = "flex";
+            emailError.style.justifyContent = "center";
             email.style.border = "solid 2px red";
             return false
         }
@@ -417,12 +436,14 @@ function validatePassword(e){
         }
     }
     if (password.value === ""){
-        requiredPassword.style.display = "block";
+        requiredPassword.style.display = "flex";
+        requiredPassword.style.justifyContent = "center";
         password.style.border = "solid 2px red";
         return false
     }
     else if(password.value.length<8 || PwdLet<1 || PwdNum<1 || PwdSm>0){
-        passwordError.style.display = "block";
+        passwordError.style.display = "flex";
+        passwordError.style.justifyContent = "center";
         password.style.border = "solid 2px red";
         return false;
     }
@@ -441,12 +462,14 @@ function writtingPassword(e){
 repPassword.addEventListener("blur",repeatPassword)
 function repeatPassword(e){
     if(repPassword.value === ""){
-        passwordConRequired.style.display = "block";
+        passwordConRequired.style.display = "flex";
+        passwordConRequired.style.justifyContent = "center";
         repPassword.style.border = "solid 2px red";
         return false;
     }
     else if (repPassword.value !== password.value){
-        passwordNotMatch.style.display = "block";
+        passwordNotMatch.style.display = "flex";
+        passwordNotMatch.style.justifyContent = "center";
         repPassword.style.border = "solid 2px red";
         return false;
     }

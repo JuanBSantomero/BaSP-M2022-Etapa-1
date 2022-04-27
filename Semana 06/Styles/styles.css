@@ -1,0 +1,217 @@
+@media (max-width: 1024px){
+    body{
+        font-family: "Reboto", sans-serif;
+    }
+    h2{
+        font-size: 30px;
+        font-weight: bold;
+        color: #373867;
+    }
+    p{
+        font-size: 14px;
+        color: #373867;
+    }
+    .header-tittle{
+        font-size: 30px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .introductive-text h1{
+        font-size: 35px;
+        font-weight: bold;
+        color:#373867;
+        text-align: center;
+        line-height: 35px;
+    }
+    .subtitle{
+        font-size: 10px;
+        font-weight: bold;
+        color: #B4AFAF;
+        text-align: center;
+    }
+    .paragraph{
+        font-size: 14px;
+        color: #373867;
+        text-align: center;
+    }
+    .box h2{
+        font-size: 24px;
+        font-weight: bold;
+        color:#46A37C;
+    }
+    .box p{
+        font-size: 14px;
+        color:#373867;
+    }
+    .text-features h2{
+        font-size: 20px;
+        font-weight: bold;
+        color: #46A37C;
+    }
+    .text-features p{
+        font-size: 18px;
+        color:#373867;
+    }
+    .contact-tittle{
+        font-size: 24px;
+        font-weight: bold;
+        color: #373867;
+    }
+    label{
+        font-size: 14px;
+        color: #373867;
+    }
+    .input-submit{
+        background-color: #AACE9B;
+        border-radius: 5px;
+        border: #AACE9B solid;
+        font-family: "Reboto", sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .input-reset{
+        background-color: #fff;
+        border-radius: 5px;
+        border: 2px #373867 solid;
+        font-family: "Reboto", sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .who-we-are h2{
+        font-size: 24px;
+        font-weight: bold;
+        color: #373867;
+        padding-left: 40px;
+        margin-top: 25px;
+    }
+    .who-we-are p{
+        font-size: 14px;
+        color: #373867;
+        padding-left: 40px;
+        padding-right: 20px;
+        margin-top: 25px;
+    }
+    .lists h2{
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .lists a{
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+    footer{
+        font-size: 14px;
+        font-style: italic;
+        color:rgb(143, 136, 140);
+    }
+}
+@media (min-width: 1024px){
+    body{
+        font-family: "Reboto", sans-serif;
+    }
+    h2{
+        font-size: 40px;
+        font-weight: bold;
+        color: #373867;
+    }
+    p{
+        font-size: 20px;
+        color: #373867;
+    }
+    .header-tittle{
+        font-size: 40px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .introductive-text h1{
+        font-size: 60px;
+        font-weight: bold;
+        color:#373867;
+    }
+    .subtitle{
+        font-size: 16px;
+        font-weight: bold;
+        color: #B4AFAF;
+    }
+    .paragraph{
+        font-size: 20px;
+        color: #373867;
+    }
+    .box h2{
+        font-size: 24px;
+        font-weight: bold;
+        color:#46A37C;
+    }
+    .box p{
+        font-size: 18px;
+        color:#373867;
+    }
+    .text-features h2{
+        font-size: 24px;
+        font-weight: bold;
+        color: #46A37C;
+    }
+    .text-features p{
+        font-size: 18px;
+        color:#373867;
+    }
+    .contact-tittle{
+        font-size: 24px;
+        font-weight: bold;
+        color: #373867;
+    }
+    label{
+        font-size: 14px;
+        color: #373867;
+    }
+    .input-submit{
+        background-color: #AACE9B;
+        border-radius: 5px;
+        border: #AACE9B solid;
+        font-size: 12px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .input-reset{
+        background-color: #fff;
+        border-radius: 5px;
+        border: 2px #373867 solid;
+        font-size: 12px;
+        font-weight: bold;
+        color: #373867;
+    }
+    .who-we-are h2{
+        font-size: 24px;
+        font-weight: bold;
+        color: #373867;
+        padding-left: 40px;
+        margin-top: 25px;
+    }
+    .who-we-are p{
+        font-size: 18px;
+        color: #373867;
+        padding-left: 40px;
+        padding-right: 20px;
+        margin-top: 25px;
+    }
+    .lists h2{
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .lists a{
+        text-decoration: none;
+        list-style: none;
+        color: black;
+        font-size: 18px;
+    }
+    footer{
+        font-size: 16px;
+        font-style: italic;
+        color:rgb(143, 136, 140);
+    }
+}
