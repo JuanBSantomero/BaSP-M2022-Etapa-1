@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet"  href="../Styles/reset.css">
+    <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="stylesheet" href="../Styles/sidebar.css">
+    <link rel="stylesheet" href="../Styles/login.css">
+    <link rel="stylesheet" href="../Styles/footer.css">
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="sidebar-container">
+        <aside class="sidebar">
+            <img class="logo" src="../Assets/logo.png">
+            <ul>
+                <li><a href="../Views/index.html">Home</a></li>
+                <li><a href="../Views/sign-up.html">Sign Up</a></li>
+                <li><a href="../Views/login.html">Log in</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+    </div>
+    <header>
+        <div class="container-hamburguer">
+            <div class="hamburguer-menu">
+                <img src="../Assets/hamburguer 1.png" alt="hamburguer">
+            </div>
+        </div>
+        <div class="header-tittle">
+            <h1>Trackgenix SA</h1>
+        </div>
+    </header>
+    <main>
+        <section class="line">
+        <section class="login-container">
+            <div class="login-box">
+            <h2>Login</h2>
+            <form id="form">
+                <div class="email-form">
+                    <div class="icon">
+                        <img src="../Assets/mail-box.png" alt="mail-box">
+                    </div>
+                    <label>Email</label>
+                    <input  id="email" type="text" name="Email" placeholder="example@mycompany.com">
+                </div>
+                    <span id="error-email"> Email is incorrect</span>
+                    <span id="email-required"> Email is required</span>
+                <div class="password-form">
+                    <div class="icon">
+                        <img src="../Assets/padlock.png" alt="paddlock">
+                    </div>
+                    <label>Password</label>
+                    <input id="password" type="password" id="pwd" name="pwd" placeholder="Password"> 
+                </div>
+                    <span id="error-password"> Password incorrect</span>
+                    <span id="password-required"> Password is required</span>
+                <div class="checkbox">
+                    <label>Remember Me</label>
+                    <input id="checkbox" type="checkbox" name="checkbox" value="Checkbox"> 
+                </div>
+                <div class="login-button">
+                    <input id="input-login" type="submit" name="login" value="Login">
+                </div>
+                <div class="login-success">
+                    <p id="login-complete"></p>
+                </div>
+                <div>
+                    <p id="success"></p>
+                </div>
+            </form>
+            </div>
+        </section>
+        </section>
+    </main>
+    <footer>
+        <a href="#">
+            <img class="rs" src="../Assets/fcb.png" alt="Fcb">
+        </a>
+        <a href="#">
+            <img class="rs" src="../Assets/in.png" alt="Lnk">
+        </a>
+        <a href="#">
+            <img class="rs" src="../Assets/insta.png" alt="Inst">
+        </a>
+            <a href="#">
+                <img class="rs" src="../Assets/twt.jpg" alt="Twtt">
+            </a>
+            <p>
+                Copyright &copy; 2022 Trackgenix S.A. All rights reserved.
+            </p>
+        </footer>
+    
+    <script src="../JavaScript/login.js"></script> 
+</body>
+</html>

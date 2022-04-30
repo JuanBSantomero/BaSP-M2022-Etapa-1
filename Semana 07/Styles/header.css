@@ -1,0 +1,29 @@
+@media (min-width: 1024px){
+    .container-hamburguer{
+        display: none;
+    }
+}
+header{
+    display: flex;
+    align-items: center;
+    background-color: #46A37C;
+    height: 150px;
+}
+
+.container-hamburguer{
+    margin-left: 20px;
+    width: 20%;
+}
+.hamburguer-menu{
+    display: flex;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    background-color: #3a8a68;
+}
+.header-tittle{
+    text-align: center;
+    margin-right: 20%;
+    width: 80%;
+}

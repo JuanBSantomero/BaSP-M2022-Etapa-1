@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="../Styles/reset.css">
+    <link rel="stylesheet" href="../Styles/sign-up.css">
+    <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="stylesheet" href="../Styles/sidebar.css">
+    <link rel="stylesheet" href="../Styles/footer.css">
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="sidebar-container">
+        <aside class="sidebar">
+            <img class="logo" src="../Assets/logo.png">
+            <ul>
+                <li><a href="../Views/index.html">Home</a></li>
+                <li><a href="../Views/sign-up.html">Sign Up</a></li>
+                <li><a href="../Views/login.html">Log in</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+    </div>
+    <div class="main-container">
+        <header>
+            <div class="container-hamburguer">
+                <div class="hamburguer-menu">
+                    <img src="../Assets/hamburguer 1.png" alt="hamburguer">
+                </div>
+            </div>
+            <div class="header-tittle">
+                <h1>Trackgenix SA</h1>
+            </div>
+        </header>
+        <main>
+            <section class="line">
+            <section class="sign-up-container">
+                <div class="sign-up-box">
+                    <h2>Sign Up</h2>
+                    <form id="form">
+                        <div class="label-inputs">
+                            <label>First Name</label>
+                            <input id="first-name" type="text" name="firstName" placeholder="Juan Bautista">
+                        </div>
+                        <div>
+                            <span id="fname-required"> First name is required</span>
+                            <span id="invalid-fname"> The first name is not valid</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>Last Name</label>
+                            <input id="last-name" type="text" name="lastName" placeholder="Santomero">
+                        </div>
+                        <div>
+                            <span id="lname-required"> Last name is required</span>
+                            <span id="invalid-lname"> The last name is not valid</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>DNI</label>
+                            <input id="DNI" type="text" name="DNI" placeholder="DNI">
+                        </div>
+                        <div>
+                            <span id="DNI-required"> DNI is required</span>
+                            <span id="DNI-invalid"> The DNI is not valid</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>Birth Date</label>
+                            <input id="birth-date" type="date" name="birthDate">
+                        </div>
+                        <div>
+                            <span id="BDate-required"> Birth date is required</span>
+                            <span id="BDate-invalid"> Invalid age</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>Phone</label>
+                            <input id="phone" type="text" name="Phone" placeholder="Phone">
+                        </div>
+                        <div>
+                            <span id="Phone-required"> Phone is required</span>
+                            <span id="Phone-invalid"> The phone is not valid</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>Adress</label>
+                            <input id="adress" type="text" name="Adress" placeholder="Adress">
+                        </div>
+                        <div>
+                            <span id="Adress-required"> Adress is required</span>
+                            <span id="Adress-invalid"> The adress is not valid</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>City</label>
+                            <input id="city" type="text" name="City" placeholder="City">
+                        </div>
+                        <div>
+                            <span id="City-required"> City is required</span>
+                            <span id="City-invalid"> The city is not valid</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>Post Code</label>
+                            <input id="post-code" type="text" name="postCode" placeholder="Post Code">
+                        </div>
+                        <div>
+                            <span id="PCode-required"> Post code is required</span>
+                            <span id="PCode-invalid"> The post code is not valid</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>Email</label>
+                            <input id="email" type="text" name="Email" placeholder="example@mycompany.com">
+                        </div>
+                        <div>
+                            <span id="error-email"> Email is incorrect</span>
+                            <span id="email-required"> Email is required</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>Password</label>
+                            <input id="password" type="password" name="pwd" placeholder="Password">
+                        </div>
+                        <div>
+                            <span id="error-password"> Password incorrect</span>
+                            <span id="password-required"> Password is required</span>
+                        </div>
+                        <div class="label-inputs">
+                            <label>Repeat Password</label>
+                            <input id="repeat-password" id="repeat-password" type="password" name="pwd" placeholder="Password">
+                        </div>
+                        <div>
+                            <span id="password-doesnt-match"> Password does not match</span>
+                            <span id="passwordcon-required"> Password is required</span>
+                        </div>
+                        <div class="buttons">
+                            <input id="input-signup" type="submit" name="submit" value="Sign Up">
+                            <input id="input-reset" type="submit" name="submit" value="Reset">
+                        </div>
+                        <div class="signUp-Succes">
+                            <p id="sign-up Complete"></p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            </section>
+        </main>
+        <footer>
+            <a href="#">
+                <img class="rs" src="../Assets/fcb.png" alt="Fcb">
+            </a>
+            <a href="#">
+                <img class="rs" src="../Assets/in.png" alt="Lnk">
+            </a>
+            <a href="#">
+                <img class="rs" src="../Assets/insta.png" alt="Inst">
+            </a>
+            <a href="#">
+                <img class="rs" src="../Assets/twt.jpg" alt="Twtt">
+            </a>
+            <p>
+                Copyright &copy; 2022 Trackgenix S.A. All rights reserved.
+            </p>
+        </footer>
+        <script src="../JavaScript/sign-up.js"></script>
+    </div>
+</body>
+</html>
