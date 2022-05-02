@@ -1,7 +1,7 @@
 var form = document.getElementById("form");
 var firstName = document.getElementById("first-name");
 var lastName = document.getElementById("last-name");
-var DNI = document.getElementById("DNI");
+var dNI = document.getElementById("DNI");
 var birthDate = document.getElementById("birth-date");
 var phone = document.getElementById("phone");
 var adress = document.getElementById("adress");
@@ -36,6 +36,44 @@ var signUp = document.getElementById("input-signup");
 var reset = document.getElementById("input-reset");
 var signUpComplete = document.getElementById("sign-up Complete");
 
+function saveData(){
+    localStorage.setItem("First Name:", firstName.value);
+    localStorage.setItem("Last Name:", lastName.value);
+    localStorage.setItem("DNI:", dNI.value);
+    localStorage.setItem("Birth Date:", birthDate.value);
+    localStorage.setItem("Phone:", phone.value);
+    localStorage.setItem("Adress:",adress.value);
+    localStorage.setItem("City:",city.value);
+    localStorage.setItem("Post Code:",postCode.value);
+    localStorage.setItem("Email:",email.value);
+    localStorage.setItem("Password:",password.value);
+}
+
+function storage(){
+    if (
+        localStorage.getItem("First Name:") != null &&
+        localStorage.getItem("Last Name:") != null &&
+        localStorage.getItem("DNI:") != null &&
+        localStorage.getItem("Birth Date:") != null &&
+        localStorage.getItem("Phone:") != null &&
+        localStorage.getItem("Adress:") != null &&
+        localStorage.getItem("City:") != null &&
+        localStorage.getItem("Post Code:") != null &&
+        localStorage.getItem("Email:") != null &&
+        localStorage.getItem("Password") != null){
+            firstName.value = localStorage.getItem("First Name:");
+            lastName.value = localStorage.getItem("Last Name:");
+            dNI.value = localStorage.getItem("DNI:");
+            birthDate.value = localStorage.getItem("Birth Date:");
+            phone.value = localStorage.getItem("Phone:");
+            adress.value = localStorage.getItem ("Adress:");
+            city.value = localStorage.getItem ("City:");
+            postCode.value = localStorage.getItem("Post Code:");
+            email.value = localStorage.getItem("Email:");
+            password.value = localStorage.getItem("Password:");
+        }
+}
+
 form.addEventListener("submit", (e) =>{
     e.preventDefault();
     if(validateFName() && validateLName() && validateDNI() && validateDate && validatePhone &&
@@ -45,7 +83,7 @@ form.addEventListener("submit", (e) =>{
        signUpComplete.innerHTML = "Sign-Up Complete"+"<p></p>"
        +"First Name: "+firstName.value+"<p></p>"
        +"Last Name: "+lastName.value+"<p></p>"
-       +"DNI: "+DNI.value+"<p></p>"
+       +"DNI: "+dNI.value+"<p></p>"
        +"Birth date: "+birthDate.value+"<p></p>"
        +"Phone: "+phone.value+"<p></p>"
        +"Adress: "+adress.value+"<p></p>"
@@ -54,6 +92,14 @@ form.addEventListener("submit", (e) =>{
        +"Email: "+email.value+"<p></p>"
        +"Password: "+password.value+"<p></p>"
        +"Repeat Password: "+repPassword.value+"</p>"
+       var url = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dNI.value}&dob=${correctFormat}&phone=${phone.value}&address=${adress.value}&city=${city.value}&zip=${postCode.value}&email=${email.value}&password=${password.value}`
+       fetch(url)
+       .then(response => response.json())
+       .then(data => {
+           console.log(data)
+           saveData(data)
+           storage(data)
+           success.innerHTML = "<p>" + data.msg + "</p>"})
     }
     else if(!validateFName() || !validateLName() || !validateDNI() || !validateDate || !validatePhone ||
     !validateAdress() || !validateCity() || !validatePostCode() || !validateEmail || !validatePassword ||
@@ -62,7 +108,7 @@ form.addEventListener("submit", (e) =>{
        signUpComplete.innerHTML = "Sign-Up Error"+"<p></p>"
        +"First Name: "+firstName.value+"<p></p>"
        +"Last Name: "+lastName.value+"<p></p>"
-       +"DNI: "+DNI.value+"<p></p>"
+       +"DNI: "+dNI.value+"<p></p>"
        +"Birth date: "+birthDate.value+"<p></p>"
        +"Phone: "+phone.value+"<p></p>"
        +"Adress: "+adress.value+"<p></p>"
@@ -140,7 +186,7 @@ function validateLName(e){
     }
     else if (lastName.value.length<3 || LNCh<1 || LNSm>0){
         lNameInvalid.style.display = "flex";
-        lNameInvalid.style.display = "center";
+        lNameInvalid.style.justifyContent = "center";
         lastName.style.border ="solid 2px red";
         return false;
     }
@@ -156,20 +202,20 @@ function writtingLName(e){
     lastName.style.border = "solid 2px black";
 }
 
-DNI.addEventListener("blur", validateDNI)
+dNI.addEventListener("blur", validateDNI)
 function validateDNI(e){
     var Numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     var DNINum = 0;
     var DNISm = 0;
-    for(i=0;i<DNI.value.length;i++){
-        if(!Numbers.includes(DNI.value[i])){
+    for(i=0;i<dNI.value.length;i++){
+        if(!Numbers.includes(dNI.value[i])){
             DNISm++
         }
-        if(Numbers.includes(DNI.value[i])){
+        if(Numbers.includes(dNI.value[i])){
             DNINum++
         }
     }
-    if(DNI.value === ""){
+    if(dNI.value === ""){
         DNIrequired.style.display = "flex";
         DNIrequired.style.justifyContent = "center";
         DNI.style.border = "solid 2px red";
@@ -178,21 +224,22 @@ function validateDNI(e){
     else if(DNI.value.length<7 || DNINum<1 || DNISm>0){
         DNIinvalid.style.display = "flex";
         DNIinvalid.style.justifyContent = "center";
-        DNI.style.border = "solid 2px red";
+        dNI.style.border = "solid 2px red";
         return false;
     }
     else{
-        DNI.style.border = "solid 2px green";
+        dNI.style.border = "solid 2px green";
         return true;
     }
 }
-DNI.addEventListener("focus", writtingDNI)
+dNI.addEventListener("focus", writtingDNI)
 function writtingDNI(e){
     DNIrequired.style.display = "none";
     DNIinvalid.style.display = "none";
-    DNI.style.border = "solid 2px black";
+    dNI.style.border = "solid 2px black";
 }
 
+var correctFormat = '';
 function getAge(date){
     var today = new Date();
     var birthDt = new Date(date);
@@ -202,6 +249,7 @@ function getAge(date){
 birthDate.addEventListener("blur", validateDate)
 function validateDate(e){
     age = e.target.value
+    var formatDate = age.split('-');
     if(birthDate.value === ""){
         bDateRequired.style.display = "flex";
         bDateRequired.style.justifyContent = "center";
@@ -215,6 +263,12 @@ function validateDate(e){
         return false;
     }
     else{
+        correctFormat=
+            formatDate.slice(1, 2)+
+            '/'+
+            formatDate.slice(2)+
+            '/'+
+            formatDate.slice(0,1)
         birthDate.style.border = "solid 2px green";
         return true;
     }

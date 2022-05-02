@@ -38,14 +38,12 @@
 }
 .label-inputs{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding-bottom: 10px;
 }
-.label-inputs label{
-    width: 20%;
-}
 .label-inputs input{
-    width: 50%;
+    width: 100%;
 }
 .buttons{
     display: flex;
@@ -68,4 +66,9 @@ span{
     width: 40%;
     box-shadow: 5px 5px 10px;
     padding: 80px;
+}
+#success{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
