@@ -49,18 +49,8 @@ function saveData(){
     localStorage.setItem("Password:",password.value);
 }
 
+window.onload=storage
 function storage(){
-    if (
-        localStorage.getItem("First Name:") != null &&
-        localStorage.getItem("Last Name:") != null &&
-        localStorage.getItem("DNI:") != null &&
-        localStorage.getItem("Birth Date:") != null &&
-        localStorage.getItem("Phone:") != null &&
-        localStorage.getItem("Adress:") != null &&
-        localStorage.getItem("City:") != null &&
-        localStorage.getItem("Post Code:") != null &&
-        localStorage.getItem("Email:") != null &&
-        localStorage.getItem("Password") != null){
             firstName.value = localStorage.getItem("First Name:");
             lastName.value = localStorage.getItem("Last Name:");
             dNI.value = localStorage.getItem("DNI:");
@@ -71,8 +61,9 @@ function storage(){
             postCode.value = localStorage.getItem("Post Code:");
             email.value = localStorage.getItem("Email:");
             password.value = localStorage.getItem("Password:");
-        }
 }
+
+var correctFormat = "";
 
 form.addEventListener("submit", (e) =>{
     e.preventDefault();
@@ -96,13 +87,13 @@ form.addEventListener("submit", (e) =>{
        fetch(url)
        .then(response => response.json())
        .then(data => {
-           console.log(data)
            saveData(data)
-           storage(data)
-           success.innerHTML = "<p>" + data.msg + "</p>"})
+           storage()
+           success.innerHTML = "<p>" + data.msg + "</p>"}) 
+       .catch(error)
     }
     else if(!validateFName() || !validateLName() || !validateDNI() || !validateDate || !validatePhone ||
-    !validateAdress() || !validateCity() || !validatePostCode() || !validateEmail || !validatePassword ||
+    !validateAdress() || !validateCity() || !validatePostCode() || !validateEmail || !validatePassword||
     !repeatPassword()){
        signUpComplete.classList.add("signUpComplete");
        signUpComplete.innerHTML = "Sign-Up Error"+"<p></p>"
@@ -239,7 +230,6 @@ function writtingDNI(e){
     dNI.style.border = "solid 2px black";
 }
 
-var correctFormat = '';
 function getAge(date){
     var today = new Date();
     var birthDt = new Date(date);
@@ -269,15 +259,15 @@ function validateDate(e){
             formatDate.slice(2)+
             '/'+
             formatDate.slice(0,1)
-        birthDate.style.border = "solid 2px green";
-        return true;
+            birthDate.style.border = "solid 2px green";
+            return true;
+        }
     }
-}
 birthDate.addEventListener("focus",selectDate)
 function selectDate(e){
     bDateRequired.style.display = "none";
     bDateInvalid.style.display = "none";
-    birthDate.style.border = "solid 2px black"
+    birthDate.style.border = "solid 2px black";
 }
 
 phone.addEventListener("blur", validatePhone)

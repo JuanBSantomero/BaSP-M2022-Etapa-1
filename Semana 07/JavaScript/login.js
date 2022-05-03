@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
         fetch(url)
         .then(response => response.json())
         .then(data => success.innerHTML = "<p>" + data.msg + "</p>")
-        .catch(Error)
+        .catch(error)
     }
     else if (!validateEmail() || !validatePassword()){
         loginComplete.classList.add("loginComplete");
