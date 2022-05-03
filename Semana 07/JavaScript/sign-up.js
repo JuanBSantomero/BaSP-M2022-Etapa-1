@@ -69,8 +69,8 @@ form.addEventListener("submit", (e) =>{
     var correctFormat = "";
     var formatDate = birthDate.value.split('-');
     correctFormat= formatDate.slice(1, 2)+ '/'+ formatDate.slice(2)+ '/'+ formatDate.slice(0,1)
-    if(validateFName() && validateLName() && validateDNI() && validateDate && validatePhone &&
-    validateAdress() && validateCity() && validatePostCode() && validateEmail && validatePassword &&
+    if(validateFName() && validateLName() && validateDNI() && validateDate(e) && validatePhone() &&
+    validateAdress() && validateCity() && validatePostCode() && validateEmail() && validatePassword() &&
     repeatPassword()){
        signUpComplete.classList.add("signUpComplete");
        signUpComplete.innerHTML = "Sign-Up Complete"+"<p></p>"
@@ -101,22 +101,38 @@ form.addEventListener("submit", (e) =>{
            console.log(error)
        })
     }
-    else if(!validateFName() || !validateLName() || !validateDNI() || !validateDate || !validatePhone ||
-    !validateAdress() || !validateCity() || !validatePostCode() || !validateEmail || !validatePassword||
-    !repeatPassword()){
-       signUpComplete.classList.add("signUpComplete");
-       signUpComplete.innerHTML = "Sign-Up Error"+"<p></p>"
-       +"First Name: "+firstName.value+"<p></p>"
-       +"Last Name: "+lastName.value+"<p></p>"
-       +"DNI: "+dNI.value+"<p></p>"
-       +"Birth date: "+birthDate.value+"<p></p>"
-       +"Phone: "+phone.value+"<p></p>"
-       +"Adress: "+adress.value+"<p></p>"
-       +"City: "+city.value+"<p></p>"
-       +"Post-Code: "+postCode.value+"<p></p>"
-       +"Email: "+email.value+"<p></p>"
-       +"Password: "+password.value+"<p></p>"
-       +"Repeat Password: "+repPassword.value+"</p>"
+    if(validateFName() !==true){
+        alert("First name invalid")
+    }
+    if(validateLName() !==true){
+        alert("Last name invalid")
+    }
+    if(validateDNI() !==true){
+        alert("DNI invalid")
+    }
+    if(validateDate(e) !==true){
+        alert("Birth date invalid")
+    }
+    if(validatePhone() !==true){
+        alert("Phone invalid")
+    }
+    if(validateAdress() !==true){
+        alert("Adress invalid")
+    }
+    if(validateCity() !==true){
+        alert("City invalid")
+    }
+    if(validatePostCode() !==true){
+        alert("Post Code invalid")
+    }
+    if(validateEmail() !==true){
+        alert("Email invalid")
+    }
+    if(validatePassword() !==true){
+        alert("Password invalid")
+    }
+    if(repeatPassword() !==true){
+        alert("Second password incorrect")
     }
 })
 
@@ -254,7 +270,7 @@ function validateDate(e){
         birthDate.style.border = "solid 2px red";
         return false;
     }
-    else if(getAge(age) <18){
+    else if(getAge(birthDate.value) <18){
         bDateInvalid.style.display = "flex";
         bDateInvalid.style.justifyContent = "center";
         birthDate.style.border = "solid 2px red";
@@ -309,6 +325,7 @@ function writtingPhone(e){
     phoneInvalid.style.display = "none";
     phone.style.border = "solid 2px black"
 }
+
 adress.addEventListener("blur", validateAdress)
 function validateAdress(e){
     var Letters = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j",
@@ -354,6 +371,7 @@ function writtingAdress(e){
     adressInvalid.style.display = "none";
     adress.style.border = "solid 2px black";
 }
+
 city.addEventListener("blur", validateCity)
 function validateCity(e){
     var LetNum = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j",
@@ -394,6 +412,7 @@ function writtingCity(e){
     cityInvalid.style.display = "none";
     city.style.border = "solid 2px black";
 }
+
 postCode.addEventListener("blur", validatePostCode)
 function validatePostCode(e){
     var Numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
