@@ -18,12 +18,13 @@ form.addEventListener("submit", (e) => {
         var url = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${email.value}&password=${password.value}`
         fetch(url)
         .then(response => response.json())
-        .then(data =>{document.getElementById("modal").style.display = "block";
-        document.getElementById("close").onclick = function () {
-        document.getElementById("modal").style.display = 'none';
-        }
-        success.classList.add("success")
-        success.innerHTML = "<p>" + data.msg + "</p>"})
+        .then(data =>{
+            document.getElementById("modal").style.display = "block";
+            document.getElementById("close").onclick = function () {
+            document.getElementById("modal").style.display = 'none';
+            }
+            success.classList.add("success")
+            success.innerHTML = "<p>" + data.msg + "</p>"})
         .catch(error =>{
             console.log(error)
         })

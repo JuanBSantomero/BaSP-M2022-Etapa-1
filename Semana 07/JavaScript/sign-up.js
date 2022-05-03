@@ -89,9 +89,14 @@ form.addEventListener("submit", (e) =>{
        fetch(url)
        .then(response => response.json())
        .then(data => {
+            document.getElementById("modal").style.display = "block";
+            document.getElementById("close").onclick = function () {
+            document.getElementById("modal").style.display = 'none';
+            }
+            success.classList.add("success")
+            success.innerHTML = "<p>" + data.msg + "</p>"
            saveData()
-           storage()
-           success.innerHTML = "<p>" + data.msg + "</p>"}) 
+           storage()}) 
        .catch(error =>{
            console.log(error)
        })
