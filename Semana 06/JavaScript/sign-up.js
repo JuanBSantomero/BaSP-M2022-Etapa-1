@@ -38,8 +38,8 @@ var signUpComplete = document.getElementById("sign-up Complete");
 
 form.addEventListener("submit", (e) =>{
     e.preventDefault();
-    if(validateFName() && validateLName() && validateDNI() && validateDate && validatePhone &&
-    validateAdress() && validateCity() && validatePostCode() && validateEmail && validatePassword &&
+    if(validateFName() && validateLName() && validateDNI() && validateDate() && validatePhone() &&
+    validateAdress() && validateCity() && validatePostCode() && validateEmail() && validatePassword() &&
     repeatPassword()){
        signUpComplete.classList.add("signUpComplete");
        signUpComplete.innerHTML = "Sign-Up Complete"+"<p></p>"
@@ -55,8 +55,8 @@ form.addEventListener("submit", (e) =>{
        +"Password: "+password.value+"<p></p>"
        +"Repeat Password: "+repPassword.value+"</p>"
     }
-    else if(!validateFName() || !validateLName() || !validateDNI() || !validateDate || !validatePhone ||
-    !validateAdress() || !validateCity() || !validatePostCode() || !validateEmail || !validatePassword ||
+    else if(!validateFName() || !validateLName() || !validateDNI() || !validateDate() || !validatePhone() ||
+    !validateAdress() || !validateCity() || !validatePostCode() || !validateEmail() || !validatePassword() ||
     !repeatPassword()){
        signUpComplete.classList.add("signUpComplete");
        signUpComplete.innerHTML = "Sign-Up Error"+"<p></p>"

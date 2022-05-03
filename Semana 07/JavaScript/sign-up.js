@@ -63,10 +63,12 @@ function storage(){
             password.value = localStorage.getItem("Password:");
 }
 
-var correctFormat = "";
 
 form.addEventListener("submit", (e) =>{
     e.preventDefault();
+    var correctFormat = "";
+    var formatDate = birthDate.value.split('-');
+    correctFormat= formatDate.slice(1, 2)+ '/'+ formatDate.slice(2)+ '/'+ formatDate.slice(0,1)
     if(validateFName() && validateLName() && validateDNI() && validateDate && validatePhone &&
     validateAdress() && validateCity() && validatePostCode() && validateEmail && validatePassword &&
     repeatPassword()){
@@ -87,10 +89,12 @@ form.addEventListener("submit", (e) =>{
        fetch(url)
        .then(response => response.json())
        .then(data => {
-           saveData(data)
+           saveData()
            storage()
            success.innerHTML = "<p>" + data.msg + "</p>"}) 
-       .catch(error)
+       .catch(error =>{
+           console.log(error)
+       })
     }
     else if(!validateFName() || !validateLName() || !validateDNI() || !validateDate || !validatePhone ||
     !validateAdress() || !validateCity() || !validatePostCode() || !validateEmail || !validatePassword||
@@ -239,7 +243,6 @@ function getAge(date){
 birthDate.addEventListener("blur", validateDate)
 function validateDate(e){
     age = e.target.value
-    var formatDate = age.split('-');
     if(birthDate.value === ""){
         bDateRequired.style.display = "flex";
         bDateRequired.style.justifyContent = "center";
@@ -253,12 +256,7 @@ function validateDate(e){
         return false;
     }
     else{
-        correctFormat=
-            formatDate.slice(1, 2)+
-            '/'+
-            formatDate.slice(2)+
-            '/'+
-            formatDate.slice(0,1)
+
             birthDate.style.border = "solid 2px green";
             return true;
         }
